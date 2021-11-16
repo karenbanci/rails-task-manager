@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <p>Details: <%= @task.details %> </p>
+</div>
+
+<%= link_to 'Back to home', tasks_path %>
+<%= link_to 'Edit', edit_tasks_path %>
+<%= link_to 'Delete this task', task_path, method: :delete, data: { confirm: "Are you sure? " } %>
