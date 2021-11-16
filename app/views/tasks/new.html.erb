@@ -1,9 +1,15 @@
-<%= form_for(@task) do |t| %>
-  <%= t.label :title %>
-  <%= t.text_field :title %>
-  <%= t.label :details %>
-  <%= t.text_field :details %>
-  <%= t.submit %>
-<% end %>
+<form>
+  <%= form_for(@task) do |t| %>
+  <div class="mb-3">
+      <%= t.label :title, class:"form-label" %>
+      <%= t.text_field :title %>
+  </div>
+  <div class="mb-3">
+      <%= t.label :details, class:"form-label" %>
+      <%= t.text_field :details %>
+  </div>
+    <%= t.submit%>
+</form>
+  <% end %>
 
-<%= link_to 'Back to home', tasks_path %>
+<button type="button" class="btn btn-light"><%= link_to 'Back to home', tasks_path %></button>
