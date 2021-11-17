@@ -1,9 +1,9 @@
 <div class="container">
-  <h1><%= @task.title %></h1>
-  <p>Details: <%= @task.details %> </p>
+  <h1 class="text-uppercase text-danger"><%= @task.title %></h1>
+  <span class="fs-6 fw-bold">Details:</span> <%= @task.details %>
 </div>
 
 
-<button type="button" class="btn btn-light"><%= link_to 'Back to home', tasks_path %></button>
-<button type="button" class="btn btn-light"><%= link_to 'Edit', edit_tasks_path %></button>
-<button type="button" class="btn btn-light"><%= link_to 'Delete this task', task_path, method: :delete, data: { confirm: "Are you sure? " } %></button>
+<%= link_to 'Back to home', tasks_path, class: "btn btn-light mt-5" %>
+<%= link_to 'Edit', edit_tasks_path, class: "btn btn-light mt-5"  %>
+<%= link_to 'Delete this task', task_path, method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-light mt-5" %>

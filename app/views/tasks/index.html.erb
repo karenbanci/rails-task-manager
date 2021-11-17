@@ -1,10 +1,8 @@
-<div class="container">
-  <h1>My Tasks List</h1>
-  <ul>
-    <% @tasks.each do |task| %>
-      <li style="list-style: none;" ><input type="checkbox" class="form-check-label" <%= 'checked' if task.completed %>> <%= link_to task.title, task_path(task) %></li>
-    <% end %>
-  </ul>
+<h1 class="text-uppercase text-danger">My Tasks List</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li style="list-style: none;" class="list-group-item" ><input type="checkbox" class="form-check-label" <%= 'checked' if task.completed %>> <%= link_to task.title, task_path(task), class: 'text-decoration-none' %></li>
+  <% end %>
+</ul>
 
-  <button type="button" class="btn btn-light"><%= link_to 'Add a new task', new_tasks_path %></button>
-</div>
+<%= link_to 'Add a new task', new_tasks_path, class: "btn btn-light mt-2" %>
