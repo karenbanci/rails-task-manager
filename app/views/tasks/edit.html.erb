@@ -1,5 +1,6 @@
 <%= form_for(@task) do |t| %>
   <%= t.label :title, class: "form-label"  %>
+  <%# require = true quer dizer que ele nao aceita a caixa vazia %>
   <%= t.text_field :title, class: "form-control", :required => true  %>
   <%= t.label :details, class: "form-label mt-3"  %>
   <%= t.text_field :details, class: "form-control" %>
